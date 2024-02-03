@@ -31,21 +31,22 @@ class BdAnalisis:
         conn.close()
         return columns_list
     
+    #Metodo para completar el diccionario bd con las tablas y columnas de la base de datos
+    def complete_bd(self):
+        for table in self.get_tables():
+            self.bd[table] = self.get_columns(table)
+    
+    #Metodo para obtener los datos de una tabla
+    def get_data(self, table):
+        conn = sqlite3.connect(self.bd_path)
+        df = pd.read_sql_query("SELECT * FROM {}".format(table), conn)
+        conn.close()
+        return df
     
 
 
 
-'''
-# Ejecutar una consulta SQL y cargar los resultados en un DataFrame de Pandas
-df = pd.read_sql_query("SELECT * FROM bookmaker.db", conn)
-
-# Cerrar la conexión a la base de datos
-conn.close()
-
-# Ahora puedes trabajar con el DataFrame 'df'
-print(df.head())
-'''
-
-
 analisis = BdAnalisis('Api_Casas_Apuestas-main/bookmaker.db')
-print(analisis.get_tables())
+analisis.complete_bd()
+for key, value in analisis.bd.items():
+    print(key, value)
