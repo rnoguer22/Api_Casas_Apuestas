@@ -16,6 +16,7 @@ class filterData:
         nulls = self.df[self.df.isnull().any(axis=1)].index.tolist()
         if eliminate:
             self.df = self.df.dropna()
+        return nulls
     
 
     #Obtenemos los estadisticos descriptivos de los datos
@@ -50,7 +51,7 @@ class filterData:
 
         # Limites permitidos para los datos
         lim_inf = Q1 - 1.5 * IQR
-        lim_sup = Q3 + 1.5 *IQR
+        lim_sup = Q3 + 1.5 * IQR
 
         # Crear la máscara
         filtro_oulier = (self.df[column] < lim_inf) | (self.df[column] > lim_sup)
@@ -65,6 +66,35 @@ class filterData:
     def atipic_values_percentaje(self):
         # Calculamos el porcentaje que componen estos valores respecto a la totalidad de los datos
         return self.df_pop_out.shape[0]/self.df.shape[0] * 100
+    
+
+    #Metodo para crear un dataframe sin valores atipicos
+    def remove_atipic_values(self):
+        self.df_non_atipic = self.df[~self.df.isin(self.df_pop_out)].dropna()
+        return self.df_non_atipic
+    
+
+    #Metodo para obtener el diagrama de pares
+    def get_pairplot(self, df):
+        sns.pairplot(df, height=3, aspect=1.5)
+        plt.show()
+
+
+    #Transformamos los datos no numéricos
+    def numeric_transform(self):
+        for column in self.df.columns:
+            if self.df[column].dtype != np.float64 and self.df[column].dtype != np.int64:
+                self.df[column] = pd.to_numeric(self.df[column], errors='coerce')
+        return self.df
+    
+    
+    #Metodo para obtener el diagrama de calor
+    def get_heatmap(self, df):
+        sns.heatmap(df.corr(), annot=True)
+        plt.show()
+
+    
+    #REGRESION LINEAL
 
 
 
@@ -74,8 +104,11 @@ print(filter.get_nulls(True))
 print(filter.df) 
 print(filter.get_stats())
 filter.get_boxplot(filter.df)
-#filter.get_histplot(filter.df)
+filter.get_histplot(filter.df)
 for column in filter.df.columns:
     filter.atipic_values(column)
     print(column, ': ', filter.atipic_values_percentaje())
-filter.get_boxplot(filter.df_pop_out)
+filter.get_pairplot(filter.df)
+print(filter.remove_atipic_values())
+filter.numeric_transform()
+filter.get_heatmap(filter.df)
