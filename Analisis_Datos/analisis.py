@@ -42,11 +42,14 @@ class BdAnalisis:
         df = pd.read_sql_query("SELECT * FROM {}".format(table), conn)
         conn.close()
         return df
+
+    def csv_storage(self, data, path):
+        data.to_csv(path)
     
 
-
-
 analisis = BdAnalisis('Api_Casas_Apuestas-main/bookmaker.db')
+
 analisis.complete_bd()
-for key, value in analisis.bd.items():
-    print(key, value)
+for table in analisis.bd:
+    df = analisis.get_data(table)
+    analisis.csv_storage(df, f'Analisis_Datos/Bd/{table}.csv')
