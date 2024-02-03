@@ -1,11 +1,12 @@
 import sqlite3
 import pandas as pd
 
-class BdAnalisis:
+class getDataFromDb:
 
     def __init__(self, bd_path):
         self.bd_path = bd_path
         self.bd = {}
+
 
     #Metodo para obtener las tablas de la base de datos
     def get_tables(self):
@@ -19,6 +20,7 @@ class BdAnalisis:
         conn.close() #Cerramos la conexión con la base de datos
         return tables_list
     
+
     #Metodo para obtener las columnas de una tabla
     def get_columns(self, table):
         conn = sqlite3.connect(self.bd_path)
@@ -31,11 +33,13 @@ class BdAnalisis:
         conn.close()
         return columns_list
     
+
     #Metodo para completar el diccionario bd con las tablas y columnas de la base de datos
     def complete_bd(self):
         for table in self.get_tables():
             self.bd[table] = self.get_columns(table)
     
+
     #Metodo para obtener los datos de una tabla
     def get_data(self, table):
         conn = sqlite3.connect(self.bd_path)
@@ -43,13 +47,17 @@ class BdAnalisis:
         conn.close()
         return df
 
+
+    #Metodo para almacenar los datos de una tabla en un archivo csv
     def csv_storage(self, data, path):
         data.to_csv(path)
     
 
-analisis = BdAnalisis('Api_Casas_Apuestas-main/bookmaker.db')
+
+
+analisis = getDataFromDb('Api_Casas_Apuestas-main/bookmaker.db')
 
 analisis.complete_bd()
 for table in analisis.bd:
     df = analisis.get_data(table)
-    analisis.csv_storage(df, f'Analisis_Datos/Bd/{table}.csv')
+    analisis.csv_storage(df, f'Analisis_Datos/Db/csv/{table}.csv')
