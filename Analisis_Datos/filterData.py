@@ -97,8 +97,6 @@ class FilterData:
         plt.show()
 
     
-    #REGRESION LINEAL
-
 
 
 
@@ -111,7 +109,11 @@ print(filter.df)
 for column in filter.df.columns:
     filter.atipic_values(column)
     print(column, ': ', filter.atipic_values_percentaje())
-filter.get_pairplot(filter.df)
-print(filter.remove_atipic_values())
+#filter.get_pairplot(filter.df)
+#print(filter.remove_atipic_values()) no tiene sentido quitar valores atipicos con tan pocos datos
 filter.numeric_transform()
-filter.get_heatmap(filter.df)
+#filter.get_heatmap(filter.df)
+filter.linearRegression('ganacia')
+print(filter.get_model_slopes())
+filter.plot_model_scopes()
+filter.get_model_metrics()
