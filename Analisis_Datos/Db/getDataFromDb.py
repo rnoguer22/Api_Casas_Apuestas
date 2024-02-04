@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 
-class getDataFromDb:
+class GetDataFromDb:
 
     def __init__(self, bd_path):
         self.bd_path = bd_path
@@ -55,7 +55,7 @@ class getDataFromDb:
 
 
 
-analisis = getDataFromDb('Api_Casas_Apuestas-main/bookmaker.db')
+analisis = GetDataFromDb('Api_Casas_Apuestas-main/bookmaker.db')
 
 analisis.complete_bd()
 for table in analisis.bd:

@@ -5,7 +5,7 @@ import numpy as np
 
 
 
-class filterData:
+class FilterData:
 
     def __init__(self, csv_path):
         self.df = pd.read_csv(csv_path)
@@ -72,26 +72,6 @@ class filterData:
     def remove_atipic_values(self):
         self.df_non_atipic = self.df[~self.df.isin(self.df_pop_out)].dropna()
         return self.df_non_atipic
-    
-
-    #Metodo para obtener el diagrama de pares
-    def get_pairplot(self, df):
-        sns.pairplot(df, height=3, aspect=1.5)
-        plt.show()
-
-
-    #Transformamos los datos no numéricos
-    def numeric_transform(self):
-        for column in self.df.columns:
-            if self.df[column].dtype != np.float64 and self.df[column].dtype != np.int64:
-                self.df[column] = pd.to_numeric(self.df[column], errors='coerce')
-        return self.df
-    
-    
-    #Metodo para obtener el diagrama de calor
-    def get_heatmap(self, df):
-        sns.heatmap(df.corr(), annot=True)
-        plt.show()
 
     
     #REGRESION LINEAL
@@ -99,7 +79,7 @@ class filterData:
 
 
 
-filter = filterData('Analisis_Datos/Db/csv/apuestas.csv')
+filter = FilterData('Analisis_Datos/Db/csv/apuestas.csv')
 print(filter.get_nulls(True))
 print(filter.df) 
 print(filter.get_stats())
