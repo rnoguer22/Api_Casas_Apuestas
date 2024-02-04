@@ -68,9 +68,6 @@ class FilterData:
         return self.df_pop_out.shape[0]/self.df.shape[0] * 100
     
 
-
-
-
     #Metodo para crear un dataframe sin valores atipicos
     def remove_atipic_values(self):
         self.df_non_atipic = self.df[~self.df.isin(self.df_pop_out)].dropna()
@@ -95,25 +92,3 @@ class FilterData:
     def get_heatmap(self, df):
         sns.heatmap(df.corr(), annot=True)
         plt.show()
-
-    
-
-
-
-filter = FilterData('Analisis_Datos/Db/csv/apuestas.csv')
-print(filter.get_nulls(True))
-print(filter.df) 
-#print(filter.get_stats())
-#filter.get_boxplot(filter.df)
-#filter.get_histplot(filter.df)
-for column in filter.df.columns:
-    filter.atipic_values(column)
-    print(column, ': ', filter.atipic_values_percentaje())
-#filter.get_pairplot(filter.df)
-#print(filter.remove_atipic_values()) no tiene sentido quitar valores atipicos con tan pocos datos
-filter.numeric_transform()
-#filter.get_heatmap(filter.df)
-filter.linearRegression('ganacia')
-print(filter.get_model_slopes())
-filter.plot_model_scopes()
-filter.get_model_metrics()
