@@ -8,9 +8,12 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
+from statsmodels.api import add_constant
+from statsmodels.regression.linear_model import OLS
 
 
-class Linear_Regression:
+
+class Linear_regression:
 
     def __init__(self, df):
         self.df = df
@@ -51,15 +54,32 @@ class Linear_Regression:
         print('R^2 coefficient of determination:', r2_score(self.y_test, self.mod_lr_predict))    
     
 
-    #Graficamos el modelo de regresión
-    def plot_regression_model(self):
-        # Realizar predicciones para todos los datos
-        predictions = self.mod_lin_reg.predict(self.x_multiple)
-        # Graficar el modelo de regresión
-        plt.figure(figsize = (10, 6))
-        plt.scatter(self.y_multiple, predictions, color='red')
-        plt.plot([self.y_multiple.min(), self.y_multiple.max()], [self.y_multiple.min(), self.y_multiple.max()], lw=2, color='blue')
-        plt.xlabel(self.target)
-        plt.ylabel('Predicciones')
-        plt.title('Regresión Lineal')
-        plt.show()
+    #Graficamos la regresión
+    def plot_regression_model(self, x):
+        x_const = add_constant(x) # add a constant to the model
+        modelo = OLS(self.y_multiple, x_const).fit() # fit the model
+        pred = modelo.predict(x_const) # make predictions
+        print(modelo.summary())
+        try:
+            const = modelo.params[0] # create a variable with the value of the constant given by the summary
+            coef = modelo.params[1] # create a variable with the value of the coef given by the summary
+            x_l=np.linspace(x.min(), x.max(), 50) 
+            y_l= coef*x_l + const # function of the line
+            plt.figure(figsize=(10, 10))
+
+            # plot the line
+            plt.plot(x_l, y_l, label=f'{x.name} vs {self.y_multiple.name}={coef}*{x.name}+{const}', color='blue')
+
+            # data
+            plt.scatter(x, self.y_multiple, color='red', label=f'{x.name} vs {self.y_multiple.name}')
+
+            plt.title('Regresion lineal')
+            plt.xlabel(f'{x.name}')
+            plt.ylabel(f'{self.y_multiple.name}')
+            plt.legend()
+            plt.show()
+            return modelo
+        except:
+            print('No se puede imprimir la recta de regresión para modelos multivariable')
+            plt.show()
+            return modelo
