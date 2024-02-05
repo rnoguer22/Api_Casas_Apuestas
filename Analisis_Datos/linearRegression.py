@@ -18,7 +18,8 @@ class Linear_Regression:
 
     #Preparamos la regresion lineal
     def readyRegression(self, target):
-        self.x_multiple = self.df.drop([target, 'fecha'], axis='columns')
+        self.target = target
+        self.x_multiple = self.df.drop([target], axis='columns')
         self.y_multiple = self.df[target]
 
         #Dividimos los datos en entrenamiento y test
@@ -47,4 +48,18 @@ class Linear_Regression:
         print('Mean Absolute Percentage Error:', mean_absolute_percentage_error(self.y_test, self.mod_lr_predict)*100)
         print('Mean Squared Error:', mean_squared_error(self.y_test, self.mod_lr_predict))
         print('Root Mean Squared Error:', np.sqrt(mean_squared_error(self.y_test, self.mod_lr_predict)))
-        print('R^2 coefficient of determination:', r2_score(self.y_test, self.mod_lr_predict))        
+        print('R^2 coefficient of determination:', r2_score(self.y_test, self.mod_lr_predict))    
+    
+
+    #Graficamos el modelo de regresión
+    def plot_regression_model(self):
+        # Realizar predicciones para todos los datos
+        predictions = self.mod_lin_reg.predict(self.x_multiple)
+        # Graficar el modelo de regresión
+        plt.figure(figsize = (10, 6))
+        plt.scatter(self.y_multiple, predictions, color='red')
+        plt.plot([self.y_multiple.min(), self.y_multiple.max()], [self.y_multiple.min(), self.y_multiple.max()], lw=2, color='blue')
+        plt.xlabel(self.target)
+        plt.ylabel('Predicciones')
+        plt.title('Regresión Lineal')
+        plt.show()
