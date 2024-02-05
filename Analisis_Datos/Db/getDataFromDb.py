@@ -51,13 +51,3 @@ class GetDataFromDb:
     #Metodo para almacenar los datos de una tabla en un archivo csv
     def csv_storage(self, data, path):
         data.to_csv(path)
-    
-
-
-
-analisis = GetDataFromDb('Api_Casas_Apuestas-main/bookmaker.db')
-
-analisis.complete_bd()
-for table in analisis.bd:
-    df = analisis.get_data(table)
-    analisis.csv_storage(df, f'Analisis_Datos/Db/csv/{table}.csv')
