@@ -25,16 +25,16 @@ class FilterData:
     
 
     #Obtenemos el diagrama de cajas de los datos
-    def get_boxplot(self, df):
+    def get_boxplot(self, df, table):
         sns.boxplot(data=df, orient='v')
-        plt.show()
+        plt.savefig(f'Analisis_Datos/Db/img/boxplot/{table}.png')
 
 
     #Histograma
-    def get_histplot(self, df):
+    def get_histplot(self, df, table):
         for column in df.columns:
             sns.histplot(df[column], kde=True)
-            plt.show()
+            plt.savefig(f'Analisis_Datos/Db/img/histogramas/{table}-{column}.png')
     
     
     #Metodo para obtener los valores atipicos
@@ -75,9 +75,9 @@ class FilterData:
 
     
     #Metodo para obtener el diagrama de pares
-    def get_pairplot(self, df):
+    def get_pairplot(self, df, table):
         sns.pairplot(df, height=3, aspect=1.5)
-        plt.show()
+        plt.savefig(f'Analisis_Datos/Db/img/pairplot/{table}.png')
 
 
     #Transformamos los datos no numéricos
@@ -89,6 +89,6 @@ class FilterData:
     
     
     #Metodo para obtener el diagrama de calor
-    def get_heatmap(self, df):
+    def get_heatmap(self, df, table):
         sns.heatmap(df.corr(), annot=True)
-        plt.show()
+        plt.savefig(f'Analisis_Datos/Db/img/heatmap/{table}.png')

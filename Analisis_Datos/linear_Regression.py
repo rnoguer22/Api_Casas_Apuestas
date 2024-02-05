@@ -77,7 +77,7 @@ class Linear_regression:
             plt.xlabel(f'{x.name}')
             plt.ylabel(f'{self.y_multiple.name}')
             plt.legend()
-            plt.show()
+            plt.savefig(f'Analisis_Datos/Db/img/linear_regression/{x.name}-{self.y_multiple.name}.png')
             return modelo
         except:
             print('No se puede imprimir la recta de regresión para modelos multivariable')

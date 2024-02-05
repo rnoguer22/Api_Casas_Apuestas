@@ -1,0 +1,33 @@
+id,nombre,pais,puntaje,activado
+1,Ajax,Paises Bajos,14.0,1
+2,Atalanta,Italia,6.0,1
+3,Atlético,España,11.0,1
+4,Barcelona,España,17.0,1
+5,Bayern,Alemania,16.0,1
+6,Benfica,Portugal,15.0,1
+7,Besiktas,Turquía,2.0,1
+8,Chelsea,Inglaterra,1.0,1
+9,Club Brugge,Bélgica,26.0,1
+10,Dortmund,Alemania,27.0,1
+11,Dynamo Kyiv,Ucrania,28.0,1
+12,Internazionale,Italia,29.0,1
+13,Juventus,Italia,9.0,1
+14,Leipzig,Alemania,8.0,1
+15,Liverpool,Inglaterra,24.0,1
+16,LOSC,Francia,23.0,1
+17,Malmö,Suecia,22.0,1
+18,Man. City,Inglaterra,21.0,1
+19,Man. United,Inglaterra,20.0,1
+20,Milan,Italia,19.0,1
+21,Paris,Francia,14.0,1
+22,Porto,Portugal,13.0,1
+23,Real Madrid,España,12.0,1
+24,Salzburg,Austria,11.0,1
+25,Sevilla,España,10.0,1
+26,Shakhtar Donetsk,Ucrania,14.0,1
+27,Sheriff,Moldavia,22.0,1
+28,Sporting CP,Portugal,25.0,1
+29,Villarreal,España,30.0,1
+30,Wolfsburg,Alemania,4.0,1
+31,Young Boys,Suiza,7.0,1
+32,Zenit,Rusia,13.0,1
