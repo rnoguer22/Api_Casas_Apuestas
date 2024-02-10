@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
 
 
 
@@ -43,3 +44,31 @@ for th in col:
     content = th.get_text(strip=True)
     columns.append(content)
 print(columns)
+
+tbody = soup_overall.find_all('tbody')
+soup_overall_rows = BeautifulSoup(str(tbody), 'html.parser')
+rows = soup_overall_rows.find_all('tr')
+
+
+data = []
+col_i = []
+counter = 0
+for tr in rows:
+    #Vamos a eliminar el texto de los span en este caso
+    for span in tr.find_all('span'):
+        span.decompose()
+    
+    for td in tr:
+        content = td.get_text(strip=True)
+        print(content)
+        col_i.append(content)
+        counter += 1
+        if counter == len(columns):
+            data.append(col_i)
+            col_i = []
+            counter = 0
+
+
+print(data)
+df = pd.DataFrame(data, columns=columns)
+df.to_csv('Web_Scrapping/scrapped_csv/UEFA_2023-2024.csv', index=True, index_label='id', encoding='utf-8-sig')
