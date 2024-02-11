@@ -97,9 +97,15 @@ class Lanzador:
                 'https://fbref.com/en/comps/8/2018-2019/2018-2019-Champions-League-Stats',
                 'https://fbref.com/en/comps/8/2017-2018/2017-2018-Champions-League-Stats',
                 'https://fbref.com/en/comps/8/2016-2017/2016-2017-Champions-League-Stats',
-                'https://fbref.com/en/comps/8/2015-2016/2015-2016-Champions-League-Stats',]
+                'https://fbref.com/en/comps/8/2015-2016/2015-2016-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2014-2015/2014-2015-Champions-League-Stats',  
+                'https://fbref.com/en/comps/8/2013-2014/2013-2014-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2012-2013/2012-2013-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2011-2012/2011-2012-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2010-2011/2010-2011-Champions-League-Stats',]
         
-        years = ['2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017', '2015-2016']
+        years = ['2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', 
+                 '2016-2017', '2015-2016', '2014-2015', '2013-2014', '2012-2013', '2011-2012', '2010-2011']
 
         for url, year in zip(urls, years):
             scrape(url, year)
