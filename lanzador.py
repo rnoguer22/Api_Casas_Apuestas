@@ -1,7 +1,11 @@
+import matplotlib.pyplot as plt
+
 from Analisis_Datos.Db.getDataFromDb import GetDataFromDb
 from Analisis_Datos.filterData import FilterData
 from Analisis_Datos.linear_Regression import Linear_regression
-import matplotlib.pyplot as plt
+
+from Web_Scrapping.scrapper import Scrapping
+
 
 
 class Lanzador:
@@ -75,3 +79,14 @@ class Lanzador:
         partidos.df.drop('fecha', inplace=True, axis=1) #Eliminamos la fecha que es siempre la misma salvo en el ultimo registro
 
         partidos.df.to_csv('Analisis_Datos/Db/csv_filtrado/partidos_filtrados.csv', index=False)
+
+    
+
+
+    
+    def lanzar_scrapper_2023_2024(self):
+        url = 'https://fbref.com/en/comps/8/Champions-League-Stats' 
+        scrap = Scrapping(url)
+        scrap.get_html(write=True, path='Web_Scrapping/scrapped_html/UEFA_2023-2024.html')
+        df = scrap.get_table()
+        scrap.save_csv(df, 'Web_Scrapping/scrapped_csv/UEFA_2023-2024.csv')
