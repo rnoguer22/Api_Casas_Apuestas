@@ -85,7 +85,7 @@ class Lanzador:
     def lanzar_scrappers(self):
         def scrape(url, year):
             scrap = Scrapping(url, year)
-            scrap.get_html(write=True)
+            scrap.get_html()
             df = scrap.get_table()
             scrap.save_csv(df)
         
