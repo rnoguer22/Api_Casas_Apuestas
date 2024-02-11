@@ -3,9 +3,10 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 
+class Scrapping:
 
-# URL de la página a analizar
-url = 'https://fbref.com/en/comps/8/Champions-League-Stats' 
+    def __init__(self, url) -> None:
+        self.url = url
 
 # Realizar una solicitud GET para obtener el HTML de la página
 response = requests.get(url)
@@ -72,3 +73,8 @@ for tr in rows:
 print(data)
 df = pd.DataFrame(data, columns=columns)
 df.to_csv('Web_Scrapping/scrapped_csv/UEFA_2023-2024.csv', index=True, index_label='id', encoding='utf-8-sig')
+
+
+
+# URL de la página a analizar
+url = 'https://fbref.com/en/comps/8/Champions-League-Stats' 
