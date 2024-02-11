@@ -82,14 +82,19 @@ class Lanzador:
 
     
 
-    
-    def lanzar_scrapper_2023_2024(self):
-        url = 'https://fbref.com/en/comps/8/Champions-League-Stats'
-        year = '2023-2024'
+
+    def scrape(self, url, year):
         scrap = Scrapping(url, year)
         scrap.get_html(write=True)
         df = scrap.get_table()
         scrap.save_csv(df)
+    
+    def lanzar_scrapper_2023_2024(self):
+        url = 'https://fbref.com/en/comps/8/Champions-League-Stats'
+        year = '2023-2024'
+        self.scrape(url, year)
 
     def lanzar_scrapper_2022_2023(self):
         url = 'https://fbref.com/en/comps/8/2022-2023/2022-2023-Champions-League-Stats'
+        year = '2022-2023'
+        self.scrape(url, year)

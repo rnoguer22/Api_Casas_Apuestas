@@ -4,6 +4,7 @@ if __name__ == '__main__':
 
     lanzador = Lanzador()
     lanzador.lanzar_scrapper_2023_2024()
+    lanzador.lanzar_scrapper_2022_2023()
 '''    
     lanzador.obtener_datos()
     lanzador.lanzar_apuestas('apuestas')
