@@ -82,19 +82,24 @@ class Lanzador:
 
     
 
+    def lanzar_scrappers(self):
+        def scrape(url, year):
+            scrap = Scrapping(url, year)
+            scrap.get_html(write=True)
+            df = scrap.get_table()
+            scrap.save_csv(df)
+        
+        urls = ['https://fbref.com/en/comps/8/Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2022-2023/2022-2023-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2021-2022/2021-2022-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2020-2021/2020-2021-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2019-2020/2019-2020-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2018-2019/2018-2019-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2017-2018/2017-2018-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2016-2017/2016-2017-Champions-League-Stats',
+                'https://fbref.com/en/comps/8/2015-2016/2015-2016-Champions-League-Stats',]
+        
+        years = ['2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020', '2018-2019', '2017-2018', '2016-2017', '2015-2016']
 
-    def scrape(self, url, year):
-        scrap = Scrapping(url, year)
-        scrap.get_html(write=True)
-        df = scrap.get_table()
-        scrap.save_csv(df)
-    
-    def lanzar_scrapper_2023_2024(self):
-        url = 'https://fbref.com/en/comps/8/Champions-League-Stats'
-        year = '2023-2024'
-        self.scrape(url, year)
-
-    def lanzar_scrapper_2022_2023(self):
-        url = 'https://fbref.com/en/comps/8/2022-2023/2022-2023-Champions-League-Stats'
-        year = '2022-2023'
-        self.scrape(url, year)
+        for url, year in zip(urls, years):
+            scrape(url, year)
