@@ -5,12 +5,13 @@ import pandas as pd
 
 class Scrapping:
 
-    def __init__(self, url) -> None:
+    def __init__(self, url, year) -> None:
         self.url = url
+        self.year = year
 
 
     #Metodo para obtener el HTML de la web
-    def get_html(self, write:bool=False, path:str=None):
+    def get_html(self, write:bool=False):
         # Realizar una solicitud GET para obtener el HTML de la página
         response = requests.get(self.url)
         # Verificar si la solicitud fue exitosa (código de estado 200)
@@ -23,6 +24,7 @@ class Scrapping:
                 # Convertir el objeto Tag a una cadena usando prettify()
                 html_str = self.soup.prettify()
                 # Imprimir el contenido del cuerpo de la página
+                path = f'Web_Scrapping/scrapped_html/UEFA_{self.year}.html'
                 with open(path, 'w', encoding='utf-8') as file:
                     file.write(html_str)
         else:
@@ -31,7 +33,7 @@ class Scrapping:
 
     #Metodo para obtener los datos de la tabla de la champions
     def get_table(self):
-        overall_stats = self.soup.find('div', id='div_results2023-202480_overall')
+        overall_stats = self.soup.find('div', id=f'div_results{self.year}80_overall')
         soup_overall = BeautifulSoup(str(overall_stats), 'html.parser')
 
         col = soup_overall.find_all('th', scope='col')
@@ -64,5 +66,6 @@ class Scrapping:
     
 
     #Metodo para guardar los datos en un archivo CSV
-    def save_csv(self, df, path):
+    def save_csv(self, df):
+        path = f'Web_Scrapping/scrapped_csv/UEFA_{self.year}.csv'
         df.to_csv(path, index=True, index_label='id', encoding='utf-8-sig')
