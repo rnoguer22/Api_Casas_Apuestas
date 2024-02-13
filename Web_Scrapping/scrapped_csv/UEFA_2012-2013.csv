@@ -1,38 +1,33 @@
-﻿id,Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,Attendance,Top Team Scorer,Goalkeeper,Notes
-0,W,Bayern Munich,13,10,2,1,31,11,+20,32,"73,667",Thomas Müller-,Manuel Neuer,→ Champions League via playoff win
-1,,,,,,,,,,,,,,
-2,F,Dortmund,13,5,6,2,24,14,+10,21,"71,239",Robert Lewandowski-,Roman Weidenfeller,
-3,,,,,,,,,,,,,,
-4,SF,Real Madrid,12,5,4,3,26,18,+8,19,"71,313",Cristiano Ronaldo-,Diego López,
-5,SF,Barcelona,12,4,5,3,18,17,+1,17,"81,477",Lionel Messi-,Víctor Valdés,
-6,,,,,,,,,,,,,,
-7,QF,Paris S-G,10,6,3,1,20,8,+12,21,"43,868",Ezequiel Lavezzi-,Salvatore Sirigu,
-8,QF,Málaga,12,4,6,2,18,9,+9,18,"25,824",Eliseu-,Willy Caballero,
-9,QF,Juventus,10,4,5,1,17,8,+9,17,"36,047",Fabio Quagliarella-,Gianluigi Buffon,
-10,QF,Galatasaray,10,4,3,3,14,14,0,15,"47,397",Burak Yılmaz-,Fernando Muslera,
-11,,,,,,,,,,,,,,
-12,R16,Celtic,12,6,2,4,17,14,+3,20,"58,211",Georgios Samaras-,Fraser Forster,
-13,R16,Porto,8,5,1,2,11,6,+5,16,"33,909",Jackson Martínez-,Helton Arruda,
-14,R16,Valencia,8,4,2,2,14,8,+6,14,"30,679",Jonas-,Vicente Guaita,
-15,R16,Schalke 04,8,3,5,0,13,10,+3,14,"52,635",Klaas-Jan Huntelaar-,Lars Unnerstall,
-16,R16,Manchester Utd,8,4,2,2,11,9,+2,14,"73,582","Javier Hernández,Robin van Persie-",David de Gea,
-17,R16,Arsenal,8,4,1,3,13,11,+2,13,"59,954",Lukas Podolski-,Vito Mannone,
-18,R16,Shakhtar,8,3,2,3,14,13,+1,11,"49,101",Willian-,Andriy Pyatov,
-19,R16,Milan,8,3,2,3,9,10,-1,11,"40,981","Stephan El Shaarawy,Alexandre Pato-",Christian Abbiati,
-20,,,,,,,,,,,,,,
-21,GR,CFR Cluj,10,6,2,2,15,9,+6,20,"15,708",Rui Pedro-,Mário Felgueiras,
-22,GR,BATE Borisov,12,5,3,4,18,19,-1,18,"25,542","Vitali Rodionov,Renan Bardini Bressan-",Andrey Harbunow,
-23,GR,Dynamo Kyiv,10,4,3,3,13,14,-1,15,"39,634",Oleh Husyev-,Maksym Koval,
-24,GR,Dinamo Zagreb,12,3,4,5,13,18,-5,13,"5,890",Ivan Krstanović-,Ivan Kelava,
-25,GR,Anderlecht,10,3,3,4,18,11,+7,12,"17,317",Dieumerci Mbokani-,Silvio Proto,
-26,GR,Chelsea,6,3,1,2,16,10,+6,10,"40,689",Oscar-,Petr Čech,
-27,GR,Olympiacos,6,3,0,3,9,9,0,9,"29,089",Kostas Mitroglou-,Roy Carroll,
-28,GR,Benfica,6,2,2,2,5,5,0,8,"49,120",Óscar Cardozo-,Artur Moraes,
-29,GR,Zenit,6,2,1,3,6,9,-3,7,"19,361",Danny-,Vyacheslav Malafeev,
-30,GR,Spartak Moscow,8,2,1,5,10,16,-6,7,"50,637",Emmanuel Emenike-,"Andriy Dykan,Sergei Pesyakov...",
-31,GR,Braga,8,1,2,5,9,15,-6,5,"11,758",Alan-,Beto,
-32,GR,Ajax,6,1,1,4,8,16,-8,4,"47,578",Siem de Jong-,Kenneth Vermeer,
-33,GR,Lille,8,1,1,6,6,14,-8,4,"41,139","Salomon Kalou,Gianni Bruno... -",Mickaël Landreau,
-34,GR,Manchester City,6,0,3,3,7,11,-4,3,"43,206",Sergio Agüero-,Joe Hart,
-35,GR,Montpellier,6,0,2,4,6,12,-6,2,"24,499",Younès Belhanda-,Geoffrey Jourdren,
-36,GR,Nordsjælland,6,0,1,5,4,22,-18,1,"21,526","Joshua John,Mikkel Beckmann... -",Jesper Hansen,
+id,Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,Attendance
+0,W,Bayern Munich,13.0,10.0,2.0,1.0,31.0,11.0,20.0,32.0,"73,667"
+2,F,Dortmund,13.0,5.0,6.0,2.0,24.0,14.0,10.0,21.0,"71,239"
+4,SF,Real Madrid,12.0,5.0,4.0,3.0,26.0,18.0,8.0,19.0,"71,313"
+5,SF,Barcelona,12.0,4.0,5.0,3.0,18.0,17.0,1.0,17.0,"81,477"
+7,QF,Paris S-G,10.0,6.0,3.0,1.0,20.0,8.0,12.0,21.0,"43,868"
+8,QF,Málaga,12.0,4.0,6.0,2.0,18.0,9.0,9.0,18.0,"25,824"
+9,QF,Juventus,10.0,4.0,5.0,1.0,17.0,8.0,9.0,17.0,"36,047"
+10,QF,Galatasaray,10.0,4.0,3.0,3.0,14.0,14.0,0.0,15.0,"47,397"
+12,R16,Celtic,12.0,6.0,2.0,4.0,17.0,14.0,3.0,20.0,"58,211"
+13,R16,Porto,8.0,5.0,1.0,2.0,11.0,6.0,5.0,16.0,"33,909"
+14,R16,Valencia,8.0,4.0,2.0,2.0,14.0,8.0,6.0,14.0,"30,679"
+15,R16,Schalke 04,8.0,3.0,5.0,0.0,13.0,10.0,3.0,14.0,"52,635"
+16,R16,Manchester Utd,8.0,4.0,2.0,2.0,11.0,9.0,2.0,14.0,"73,582"
+17,R16,Arsenal,8.0,4.0,1.0,3.0,13.0,11.0,2.0,13.0,"59,954"
+18,R16,Shakhtar,8.0,3.0,2.0,3.0,14.0,13.0,1.0,11.0,"49,101"
+19,R16,Milan,8.0,3.0,2.0,3.0,9.0,10.0,-1.0,11.0,"40,981"
+21,GR,CFR Cluj,10.0,6.0,2.0,2.0,15.0,9.0,6.0,20.0,"15,708"
+22,GR,BATE Borisov,12.0,5.0,3.0,4.0,18.0,19.0,-1.0,18.0,"25,542"
+23,GR,Dynamo Kyiv,10.0,4.0,3.0,3.0,13.0,14.0,-1.0,15.0,"39,634"
+24,GR,Dinamo Zagreb,12.0,3.0,4.0,5.0,13.0,18.0,-5.0,13.0,"5,890"
+25,GR,Anderlecht,10.0,3.0,3.0,4.0,18.0,11.0,7.0,12.0,"17,317"
+26,GR,Chelsea,6.0,3.0,1.0,2.0,16.0,10.0,6.0,10.0,"40,689"
+27,GR,Olympiacos,6.0,3.0,0.0,3.0,9.0,9.0,0.0,9.0,"29,089"
+28,GR,Benfica,6.0,2.0,2.0,2.0,5.0,5.0,0.0,8.0,"49,120"
+29,GR,Zenit,6.0,2.0,1.0,3.0,6.0,9.0,-3.0,7.0,"19,361"
+30,GR,Spartak Moscow,8.0,2.0,1.0,5.0,10.0,16.0,-6.0,7.0,"50,637"
+31,GR,Braga,8.0,1.0,2.0,5.0,9.0,15.0,-6.0,5.0,"11,758"
+32,GR,Ajax,6.0,1.0,1.0,4.0,8.0,16.0,-8.0,4.0,"47,578"
+33,GR,Lille,8.0,1.0,1.0,6.0,6.0,14.0,-8.0,4.0,"41,139"
+34,GR,Manchester City,6.0,0.0,3.0,3.0,7.0,11.0,-4.0,3.0,"43,206"
+35,GR,Montpellier,6.0,0.0,2.0,4.0,6.0,12.0,-6.0,2.0,"24,499"
+36,GR,Nordsjælland,6.0,0.0,1.0,5.0,4.0,22.0,-18.0,1.0,"21,526"

@@ -1,34 +1,33 @@
-﻿id,Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,xG,xGA,xGD,xGD/90,Last 5,Attendance,Top Team Scorer,Goalkeeper,Notes
-0,R16,Manchester City,6,6,0,0,18,7,+11,18,17.0,3.3,+13.7,+2.28,WWWWW,"50,885",Erling Haaland-,Ederson,
-1,R16,Real Madrid,6,6,0,0,16,7,+9,18,15.0,7.6,+7.4,+1.23,WWWDW,"69,093",Jude Bellingham-,Kepa Arrizabalaga,
-2,R16,Bayern Munich,6,5,1,0,12,6,+6,16,9.3,6.8,+2.4,+0.40,LWWWL,"75,000",Harry Kane-,"Sven Ulreich,Manuel Neuer",
-3,R16,Atlético Madrid,6,4,2,0,17,6,+11,14,9.3,6.5,+2.7,+0.46,WWWDL,"62,060","Álvaro Morata,Antoine Griezmann-",Jan Oblak,
-4,R16,Arsenal,6,4,1,1,16,4,+12,13,10.7,3.8,+7.0,+1.16,LLWWW,"59,624",Gabriel Jesus-,David Raya,
-5,R16,Porto,6,4,0,2,15,8,+7,12,9.8,6.3,+3.5,+0.58,DWWWD,"47,555","Galeno,Evanilson-",Diogo Costa,
-6,R16,Barcelona,6,4,0,2,12,6,+6,12,10.5,5.6,+4.9,+0.82,WLLWW,"41,977","Ferrán Torres,João Félix-",Marc-André ter Stegen,
-7,R16,Real Sociedad,6,3,3,0,7,2,+5,12,8.7,3.8,+5.0,+0.83,WDDDL,"35,942",Brais Méndez-,Álex Remiro,
-8,R16,RB Leipzig,6,4,0,2,13,10,+3,12,9.8,8.5,+1.3,+0.22,LLLWD,"43,589",Loïs Openda-,Janis Blaswich,
-9,R16,Inter,6,3,3,0,8,5,+3,12,12.3,5.3,+7.0,+1.17,WWWWW,"69,136","Alexis Sánchez,Lautaro Martínez-",Yann Sommer,
-10,R16,Dortmund,6,3,2,1,7,4,+3,11,8.0,10.6,-2.6,-0.43,WWWDW,"81,365",Karim Adeyemi-,Gregor Kobel,
-11,R16,Napoli,6,3,1,2,10,9,+1,10,8.4,8.2,+0.1,+0.02,WWLDW,"43,980","Piotr Zieliński,Giovanni Simeone... -",Alex Meret,
-12,R16,Lazio,6,3,1,2,7,7,0,10,8.6,7.1,+1.4,+0.24,WLDLW,"44,445",Ciro Immobile-,Ivan Provedel,
-13,R16,PSV Eindhoven,6,2,3,1,8,10,-2,9,7.9,8.6,-0.7,-0.12,WWDWD,"34,469",Luuk de Jong-,Walter Benítez,
-14,R16,Paris S-G,6,2,2,2,9,8,+1,8,13.4,6.3,+7.1,+1.18,WDWWW,"46,592",Kylian Mbappé-,Gianluigi Donnarumma,
-15,R16,FC Copenhagen,6,2,2,2,8,8,0,8,7.6,8.7,-1.1,-0.19,DLDLW,"35,505",Lukas Lerager-,Kamil Grabara,
-16,,,,,,,,,,,,,,,,,,,
-17,GR,Shakhtar,6,3,0,3,10,12,-2,9,7.4,10.9,-3.5,-0.58,DWWWL,"47,695",Danylo Sikan-,Dmytro Riznyk,
-18,GR,Milan,6,2,2,2,5,8,-3,8,9.6,7.7,+1.9,+0.32,LWWDW,"72,212",Samuel Chukwueze-,Mike Maignan,
-19,GR,Lens,6,2,2,2,6,11,-5,8,6.1,7.5,-1.4,-0.23,DLWWW,"37,543","Angelo Fulgini,Elye Wahi-",Brice Samba,
-20,GR,Feyenoord,6,2,0,4,9,10,-1,6,10.6,8.0,+2.6,+0.43,WDWDW,"44,010",Santiago Giménez-,Justin Bijlow,
-21,GR,Newcastle Utd,6,1,2,3,6,7,-1,5,5.9,12.3,-6.4,-1.07,LWWDW,"52,023","Dan Burn,Fabian Schär... -",Nick Pope,
-22,GR,Galatasaray,6,1,2,3,10,13,-3,5,9.8,10.2,-0.4,-0.07,WWWWW,"50,140","Mauro Icardi,Hakim Ziyech... -",Fernando Muslera,
-23,GR,Manchester Utd,6,1,1,4,12,15,-3,4,10.5,11.4,-0.9,-0.15,WDWWW,"73,175",Rasmus Højlund-,André Onana,
-24,GR,Benfica,6,1,1,4,7,11,-4,4,7.8,15.9,-8.1,-1.34,WWWWW,"56,621",João Mário-,Anatolii Trubin,
-25,GR,RB Salzburg,6,1,1,4,4,8,-4,4,7.4,11.4,-3.9,-0.66,DWWLD,"28,477",Oscar Gloukh-,Alexander Schlager,
-26,GR,Young Boys,6,1,1,4,7,13,-6,4,6.4,15.3,-8.9,-1.48,WLWWD,"31,500",Meschak Elia-,Anthony Racioppi,
-27,GR,Braga,6,1,1,4,6,12,-6,4,8.3,10.0,-1.7,-0.28,DLWDW,"21,366","Bruma,Álvaro djaló-",Matheus,
-28,GR,Celtic,6,1,1,4,5,15,-10,4,4.9,11.7,-6.8,-1.13,WWWDW,"56,099","Kyogo Furuhashi,Luis Enrique Palma-",Joe Hart,
-29,GR,Antwerp,6,1,0,5,6,17,-11,3,6.2,11.1,-4.9,-0.81,LWLWW,"13,570","Vincent Janssen,Arbnor Muja... -",Jean Butez,
-30,GR,Union Berlin,6,0,2,4,6,10,-4,2,5.6,11.5,-5.9,-0.98,LWLDW,"72,976",Sheraldo Becker-,Frederik Rønnow,
-31,GR,Sevilla,6,0,2,4,7,12,-5,2,5.9,10.8,-4.9,-0.81,WLLDW,"34,181","Sergio Ramos,Nemanja Gudelj... -",Marko Dmitrović,
-32,GR,Red Star,6,0,1,5,7,15,-8,1,8.7,14.8,-6.1,-1.02,WLWLW,"46,202",Osman Bukari-,Omri Glazer,
+id,Rk,Squad,MP,W,D,L,GF,GA,GD,Pts,xG,xGA,xGD,xGD/90,Last 5,Attendance
+0,R16,Manchester City,6.0,6.0,0.0,0.0,18.0,7.0,11.0,18.0,17.0,3.3,13.7,2.28,WWWWW,"50,885"
+1,R16,Real Madrid,6.0,6.0,0.0,0.0,16.0,7.0,9.0,18.0,15.0,7.6,7.4,1.23,WWWDW,"69,093"
+2,R16,Bayern Munich,6.0,5.0,1.0,0.0,12.0,6.0,6.0,16.0,9.3,6.8,2.4,0.4,LWWWL,"75,000"
+3,R16,Atlético Madrid,6.0,4.0,2.0,0.0,17.0,6.0,11.0,14.0,9.3,6.5,2.7,0.46,WWWDL,"62,060"
+4,R16,Arsenal,6.0,4.0,1.0,1.0,16.0,4.0,12.0,13.0,10.7,3.8,7.0,1.16,LLWWW,"59,624"
+5,R16,Porto,6.0,4.0,0.0,2.0,15.0,8.0,7.0,12.0,9.8,6.3,3.5,0.58,DWWWD,"47,555"
+6,R16,Barcelona,6.0,4.0,0.0,2.0,12.0,6.0,6.0,12.0,10.5,5.6,4.9,0.82,WLLWW,"41,977"
+7,R16,Real Sociedad,6.0,3.0,3.0,0.0,7.0,2.0,5.0,12.0,8.7,3.8,5.0,0.83,WDDDL,"35,942"
+8,R16,RB Leipzig,6.0,4.0,0.0,2.0,13.0,10.0,3.0,12.0,9.8,8.5,1.3,0.22,LLLWD,"43,589"
+9,R16,Inter,6.0,3.0,3.0,0.0,8.0,5.0,3.0,12.0,12.3,5.3,7.0,1.17,WWWWW,"69,136"
+10,R16,Dortmund,6.0,3.0,2.0,1.0,7.0,4.0,3.0,11.0,8.0,10.6,-2.6,-0.43,WWWDW,"81,365"
+11,R16,Napoli,6.0,3.0,1.0,2.0,10.0,9.0,1.0,10.0,8.4,8.2,0.1,0.02,WWLDW,"43,980"
+12,R16,Lazio,6.0,3.0,1.0,2.0,7.0,7.0,0.0,10.0,8.6,7.1,1.4,0.24,WLDLW,"44,445"
+13,R16,PSV Eindhoven,6.0,2.0,3.0,1.0,8.0,10.0,-2.0,9.0,7.9,8.6,-0.7,-0.12,WWDWD,"34,469"
+14,R16,Paris S-G,6.0,2.0,2.0,2.0,9.0,8.0,1.0,8.0,13.4,6.3,7.1,1.18,WDWWW,"46,592"
+15,R16,FC Copenhagen,6.0,2.0,2.0,2.0,8.0,8.0,0.0,8.0,7.6,8.7,-1.1,-0.19,DLDLW,"35,505"
+17,GR,Shakhtar,6.0,3.0,0.0,3.0,10.0,12.0,-2.0,9.0,7.4,10.9,-3.5,-0.58,DWWWL,"47,695"
+18,GR,Milan,6.0,2.0,2.0,2.0,5.0,8.0,-3.0,8.0,9.6,7.7,1.9,0.32,LWWDW,"72,212"
+19,GR,Lens,6.0,2.0,2.0,2.0,6.0,11.0,-5.0,8.0,6.1,7.5,-1.4,-0.23,DLWWW,"37,543"
+20,GR,Feyenoord,6.0,2.0,0.0,4.0,9.0,10.0,-1.0,6.0,10.6,8.0,2.6,0.43,WDWDW,"44,010"
+21,GR,Newcastle Utd,6.0,1.0,2.0,3.0,6.0,7.0,-1.0,5.0,5.9,12.3,-6.4,-1.07,LWWDW,"52,023"
+22,GR,Galatasaray,6.0,1.0,2.0,3.0,10.0,13.0,-3.0,5.0,9.8,10.2,-0.4,-0.07,WWWWW,"50,140"
+23,GR,Manchester Utd,6.0,1.0,1.0,4.0,12.0,15.0,-3.0,4.0,10.5,11.4,-0.9,-0.15,WDWWW,"73,175"
+24,GR,Benfica,6.0,1.0,1.0,4.0,7.0,11.0,-4.0,4.0,7.8,15.9,-8.1,-1.34,WWWWW,"56,621"
+25,GR,RB Salzburg,6.0,1.0,1.0,4.0,4.0,8.0,-4.0,4.0,7.4,11.4,-3.9,-0.66,DWWLD,"28,477"
+26,GR,Young Boys,6.0,1.0,1.0,4.0,7.0,13.0,-6.0,4.0,6.4,15.3,-8.9,-1.48,WLWWD,"31,500"
+27,GR,Braga,6.0,1.0,1.0,4.0,6.0,12.0,-6.0,4.0,8.3,10.0,-1.7,-0.28,DLWDW,"21,366"
+28,GR,Celtic,6.0,1.0,1.0,4.0,5.0,15.0,-10.0,4.0,4.9,11.7,-6.8,-1.13,WWWDW,"56,099"
+29,GR,Antwerp,6.0,1.0,0.0,5.0,6.0,17.0,-11.0,3.0,6.2,11.1,-4.9,-0.81,LWLWW,"13,570"
+30,GR,Union Berlin,6.0,0.0,2.0,4.0,6.0,10.0,-4.0,2.0,5.6,11.5,-5.9,-0.98,LWLDW,"72,976"
+31,GR,Sevilla,6.0,0.0,2.0,4.0,7.0,12.0,-5.0,2.0,5.9,10.8,-4.9,-0.81,WLLDW,"34,181"
+32,GR,Red Star,6.0,0.0,1.0,5.0,7.0,15.0,-8.0,1.0,8.7,14.8,-6.1,-1.02,WLWLW,"46,202"
