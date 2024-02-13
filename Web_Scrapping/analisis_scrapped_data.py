@@ -22,6 +22,7 @@ class AnalisisScrappedData:
         df.drop('Top Team Scorer', inplace=True, axis=1)
         df.drop('Goalkeeper', inplace=True, axis=1)
         df.dropna(inplace=True)
+        df['id'] = df.index
         df.to_csv(path, index=False)
 
 
