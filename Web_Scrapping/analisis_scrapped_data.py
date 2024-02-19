@@ -21,11 +21,13 @@ class AnalisisScrappedData:
     #En esta funcion vamos a analizar los datos de un dataframe
     def analize(self, path):
         df = pd.read_csv(path)
+        '''
         df.drop('Notes', inplace=True, axis=1)
         df.drop('Top Team Scorer', inplace=True, axis=1)
         df.drop('Goalkeeper', inplace=True, axis=1)
         df.dropna(inplace=True)
         df['id'] = df.index
+        '''
         try: 
             df['Attendance'] = df['Attendance'].str.replace(',', '').astype(float) / 1000
         except:
