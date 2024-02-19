@@ -5,6 +5,7 @@ from Analisis_Datos.filterData import FilterData
 from Analisis_Datos.linear_Regression import Linear_regression
 
 from Web_Scrapping.scrapper import Scrapping
+from Web_Scrapping.analisis_scrapped_data import AnalisisScrappedData
 
 
 
@@ -109,3 +110,9 @@ class Lanzador:
 
         for url, year in zip(urls, years):
             scrape(url, year)
+    
+    
+    def lanzar_analisis(self):
+        analisis = AnalisisScrappedData()
+        analisis.analize_csv()
+        analisis.get_final_data()
