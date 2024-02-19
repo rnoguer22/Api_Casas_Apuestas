@@ -11,7 +11,9 @@ class AnalisisScrappedData:
 
     #En esta funcion vamos a analizar los datos de los csv
     def analize_csv(self):
+        print('Analizando los siguientes datos:')
         for csv in self.rutas:
+            print(csv)
             self.data_path = self.ruta + '/' + csv
             self.analize(self.data_path)
 
@@ -37,7 +39,9 @@ class AnalisisScrappedData:
             pass
         #Obtenemos la temporada de cada champions y lo añadimos al nombre del equipo, para diferenciar entre temporadas
         year = path.split('/')[2].split('_')[1].split('.')[0]
-        df['Squad'] = df['Squad'] + ' ' + year
+        if not df['Squad'].str.contains(year).any():
+            df['Squad'] = df['Squad'] + ' ' + year
+
 
         df.to_csv(path, index=False)
 
@@ -46,5 +50,4 @@ class AnalisisScrappedData:
 
 
 analisis = AnalisisScrappedData()
-print(analisis.rutas)
 analisis.analize_csv()
