@@ -59,9 +59,13 @@ class AnalisisScrappedData:
 
         final_df.drop(['xG','xGA','xGD','xGD/90'], axis=1, inplace=True)
         final_df['Rk'] = final_df['Rk'].apply(self.get_ucl_rk)
+        df_predictions = final_df.tail(32)
+        final_df = final_df.iloc[:-32]   
         final_df.to_csv('UEFA_Final_Data.csv', index=False)
-        return final_df
+        df_predictions.to_csv('UEFA_Predictions.csv', index=False)
     
+
+    #Funcion para obtener el ranking de la champions
     def get_ucl_rk(self, standing: str):
         if standing == 'GR':
             return 1
