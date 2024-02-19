@@ -42,8 +42,21 @@ class AnalisisScrappedData:
         if not df['Squad'].str.contains(year).any():
             df['Squad'] = df['Squad'] + ' ' + year
 
-
         df.to_csv(path, index=False)
+
+    
+    def get_final_data(self):
+        dfs = []
+        contador = 0
+        for csv in self.rutas:
+            data_path = self.ruta + '/' + csv
+            df = pd.read_csv(data_path)
+            df['id'] = range(contador, contador + len(df))
+            dfs.append(df)
+            contador += len(df)
+        final_df = pd.concat(dfs)
+        final_df.to_csv('UEFA_Final_Data.csv', index=False)
+        return final_df
 
 
 
@@ -51,3 +64,4 @@ class AnalisisScrappedData:
 
 analisis = AnalisisScrappedData()
 analisis.analize_csv()
+analisis.get_final_data()
