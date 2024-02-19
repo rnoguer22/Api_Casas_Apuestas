@@ -56,5 +56,22 @@ class AnalisisScrappedData:
             dfs.append(df)
             contador += len(df)
         final_df = pd.concat(dfs)
+
+        final_df.drop(['xG','xGA','xGD','xGD/90'], axis=1, inplace=True)
+        final_df['Rk'] = final_df['Rk'].apply(self.get_ucl_rk)
         final_df.to_csv('UEFA_Final_Data.csv', index=False)
         return final_df
+    
+    def get_ucl_rk(self, standing: str):
+        if standing == 'GR':
+            return 1
+        elif standing == 'R16':
+            return 2
+        elif standing == 'QF':
+            return 3
+        elif standing == 'SF':
+            return 4
+        elif standing == 'F':
+            return 5
+        else:
+            return 6
