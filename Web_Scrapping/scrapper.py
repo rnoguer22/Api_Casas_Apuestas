@@ -33,6 +33,7 @@ class Scrapping:
 
     #Metodo para obtener los datos de la tabla de la champions
     def get_table(self):
+        print('Obteniendo datos champions' + ' ' + str(self.year) + '...')
         overall_stats = self.soup.find('div', id=f'div_results{self.year}80_overall')
         soup_overall = BeautifulSoup(str(overall_stats), 'html.parser')
 

@@ -22,7 +22,7 @@ class Prediction:
         y_pred = clf.predict(X_pred)
         prediction_df = pd.DataFrame({'Squad':teams, 'Prediction':y_pred})
         prediction_df['Prediction'] = prediction_df['Prediction'].apply(self.convert)
-        return prediction_df
+        prediction_df.to_csv('UEFA_Predictions.csv', index=False)
 
 
     #Funcion para convertir el numero de standing a la ronda de la champions

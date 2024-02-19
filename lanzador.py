@@ -120,5 +120,5 @@ class Lanzador:
     
 
     def lanzar_prediccion(self):
-        prediction = Prediction('UEFA_Final_Data.csv')
-        print(prediction.make_predictions('UEFA_Predictions.csv'))
+        prediction = Prediction('UEFA_Analisis/UEFA_Final_Data.csv')
+        prediction.make_predictions('UEFA_Analisis/UEFA_Target.csv')
